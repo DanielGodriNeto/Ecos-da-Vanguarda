@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>uknsbu28okjk</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TM_Terra" sid="350936838391024">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Mancato\Downloads\TopDownFantasy_Forest_v1\TopDownFantasy-Forest\Tiles\Tileset1xPadding.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TM_Grama" sid="165458259442963">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Mancato\Downloads\TopDownFantasy_Forest_v1\TopDownFantasy-Forest\Tiles\Tileset1xPadding.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TM_Agua" sid="489868354114228">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Mancato\Downloads\TopDownFantasy_Forest_v1\TopDownFantasy-Forest\Tiles\Tileset1xPadding.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TM_Sombras" sid="200957553780184">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Mancato\Downloads\TopDownFantasy_Forest_v1\TopDownFantasy-Forest\Tiles\Tileset1xPadding.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Decoracoes" sid="689900161481469">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Mancato\Downloads\TopDownFantasy_Forest_v1\TopDownFantasy-Forest\Decorations\Decorations.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TM_Montanha" sid="501427162165638">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Mancato\Downloads\TopDownFantasy_Forest_v1\TopDownFantasy-Forest\Tiles\Tileset1xPadding.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Casa" sid="423809264202561">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176282652408321" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\image-removebg-preview (1).png">
+                        <collision-poly>
+                            <point x="0.265625" y="0.265625" />
+                            <point x="0.5" y="0.0703125" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.929688" y="0.5" />
+                            <point x="0.820313" y="0.820313" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.195313" y="0.804688" />
+                            <point x="0.0546875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Porta" sid="664155924042781">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549907884653449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cantoQuebradoDungeon" sid="827113692213576">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\decorative_cracks_coasts_animation.png" />
+            <tiles />
+        </object-type>
+        <object-type name="ChãoDungeon" sid="886967035714893">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\decorative_cracks_floor.png" />
+            <tiles />
+        </object-type>
+        <object-type name="ParedesDungeon" sid="760572214972645">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\decorative_cracks_walls.png" />
+            <tiles />
+        </object-type>
+        <object-type name="FogoAnimaçao" sid="597319440061564">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\fire_animation.png" />
+            <tiles />
+        </object-type>
+        <object-type name="DecoraçõesDungeon" sid="979822519384048">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\Objects.png" />
+            <tiles />
+        </object-type>
+        <object-type name="ArmadilhaAnimação" sid="285737711813838">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\trap_animation.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Extras" sid="129932877887894">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\walls_floor.png" />
+            <tiles />
+        </object-type>
+        <object-type name="AguasDungeon" sid="971671039555641">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\Water_coasts_animation.png" />
+            <tiles />
+        </object-type>
+        <object-type name="DetalhesAgua" sid="507280659225588">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\water_details_animation.png" />
+            <tiles />
+        </object-type>
+        <object-type name="PortaDungeon" sid="706203550542946">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\gabriel.kulik.GRUPOMARISTA.000\Downloads\free-2d-top-down-pixel-dungeon-asset-pack\Tiled_files\doors_lever_chest_animation.png" />
+            <tiles />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>Layout 2.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
