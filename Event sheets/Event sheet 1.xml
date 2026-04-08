@@ -2,5 +2,614 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable constant="0" name="Invisibility_Frames" sid="131164655416021" static="0" type="number">0</variable>
+        <variable constant="0" name="Vida" sid="404834653579756" static="0" type="number">3</variable>
+        <variable constant="0" name="Atacando" sid="591192875618759" static="0" type="number">0</variable>
+        <variable constant="0" name="Ataque_cooldown" sid="863755709401162" static="0" type="number">0</variable>
+        <variable constant="0" name="Tiro_Arco" sid="983183270862311" static="0" type="number">0</variable>
+        <variable constant="0" name="Cooldown" sid="810605285962360" static="0" type="number">0</variable>
+        <variable constant="0" name="OlhandoCimaBaixo" sid="426078923479581" static="0" type="number">0</variable>
+        <event-block sid="219153824882927">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="278517577024643" type="tpdungeon">
+                    <param id="0" name="Object">personagem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="776237581233668" type="System">
+                    <param id="0" name="Layout">forest</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="211202089575511" title="Movimentacao/ANimacoes">
+            <sub-events>
+                <event-block sid="507726969343230">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="677641435118616" type="personagem">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="791089899544249" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="553378983666849" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="200132925770127" type="personagem">
+                            <param id="0" name="Animation">&quot;andar&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566651400637991">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="657433652664736" type="System">
+                            <param id="0" name="First value">personagem.8Direction.VectorX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="519242852704810" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="626858307689000" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="127093515175653" type="personagem">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="828094466542579">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="394328635734898" type="System">
+                            <param id="0" name="First value">personagem.8Direction.VectorX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="768810726962247" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="482946662311094" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="586695503703547" type="personagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="661764756251735">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="818339846643057" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="709035342352079" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="937366610096259" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="370158192988017" type="personagem">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="525003470726798" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="523404987993022">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="461338599294959" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="236110214345241" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="339448638819011" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="402333684444148" type="personagem">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="913209671359624" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247518833103662">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="251339122073669" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="728770274261615" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="955202438095960" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="226938759478517" type="personagem">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="725089629089827" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="490952393383615">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="248636542894180" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="156903312597370" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="969702805189103" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="658260714951085" type="personagem">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="174076582735499" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="425078826473816" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="638997861414587">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="518609747539384" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="234967759437387" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="453543768144843" type="personagem">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="815841522609083" type="personagem">
+                            <param id="0" name="Animation">&quot;tirodearco&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="848489671003116" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="210710313384905">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="101889058968526" type="personagem">
+                            <param id="0" name="Animation">&quot;tirodearco&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="636399468678966" type="personagem">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="164255453689977" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="839907394945684" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="624237358391842" type="personagem" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="130475873931040" type="personagem">
+                            <param id="0" name="Object">SPR_Flecha</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="375675252480470" type="SPR_Flecha">
+                            <param id="0" name="Speed">500</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="967488514270113" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="918667730836605" type="personagem">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="842854120734937" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980174705048997">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="242879506394888" type="personagem">
+                            <param id="0" name="Animation">&quot;tirodearco&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="767439146359733" type="personagem">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="878425593282427" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="366092220717689" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="876018210209888" type="personagem">
+                            <param id="0" name="Object">SPR_Flecha</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="486124455844016" type="SPR_Flecha">
+                            <param id="0" name="Speed">500</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="813248912016954" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="112912986728829" type="SPR_Flecha">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="475869054140136" type="personagem">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="944194471685294" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="851749004478894">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="140750907869237" type="personagem">
+                            <param id="0" name="Animation">&quot;tirodearco&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="447160408312450" type="personagem">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="403495020964615" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="903884698088130" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="622783190680181" type="personagem">
+                            <param id="0" name="Object">SPR_Flecha</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="411198704790349" type="SPR_Flecha">
+                            <param id="0" name="Speed">500</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="725428830147981" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="748541655324989" type="SPR_Flecha">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="861779365333958" type="personagem">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="186359343094338" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="202927343848840">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="392300966447873" type="personagem">
+                            <param id="0" name="Animation">&quot;tirodearco&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="725382794280973" type="personagem">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="624603095201846" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="388322008103036" type="System">
+                            <param id="0" name="Variable">OlhandoCimaBaixo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="608133296700061" type="personagem" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="325238519052855" type="personagem">
+                            <param id="0" name="Object">SPR_Flecha</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="503832952152816" type="SPR_Flecha">
+                            <param id="0" name="Speed">-500</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446989365172548" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="504366262124886" type="personagem">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="137407350982376" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="598417522198857">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="777368523444898" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="337566529096097" type="System">
+                            <param id="0" name="Variable">Cooldown</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="151781348299751">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="677883157831938" type="personagem">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="449797674309328" type="System">
+                            <param id="0" name="Variable">Tiro_Arco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="278696379493513" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="524483159147189" type="personagem">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247365171002616">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="917813416397469" type="Keyboard">
+                            <param id="0" name="Key">81</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="696294821069166" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="540670990223594" type="personagem">
+                            <param id="0" name="Animation">&quot;ataque&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="370217431670751" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243000957661133">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="146387931632951" type="personagem">
+                            <param id="0" name="Animation">&quot;ataque&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="305818537264182" type="System">
+                            <param id="0" name="Variable">Atacando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859107084769288">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="548350947001754" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="465328992859062" type="personagem">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="927077363400025" title="Combate">
+            <sub-events>
+                <event-block sid="517189549398982">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="856218531337993" type="personagem">
+                            <param id="0" name="Object">cogumelo</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="518718608952694" type="personagem">
+                            <param id="0" name="Animation">&quot;ataque&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="310413782021351" type="System">
+                            <param id="0" name="Variable">Invisibility_Frames</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="670740276996514" type="System">
+                            <param id="0" name="Variable">Vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="119031536052177" type="System">
+                            <param id="0" name="Variable">Invisibility_Frames</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="556571093443358" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="784528188428733" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="184593681301336" type="personagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="593705595678134" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="231285991794814" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="287980231854963" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="809485957456670" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="756058936139447" type="personagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="255781891270155" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="617208191212105" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="575594104770296" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="416341201068811" type="personagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="698889261471459" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="800095008085247" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="196002411524053" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="542941126539148" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="506606019664934" type="personagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="226883062673782" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="376850637457249" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="851812185193256" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="281432077014057" type="personagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="944846564080746" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="419258302151299" type="personagem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="193450125841080" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="887497941503515" type="personagem">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="111045916592458" type="System">
+                            <param id="0" name="Variable">Invisibility_Frames</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="266038093226206">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="271101751358628" type="System">
+                            <param id="0" name="Variable">Vida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="384415427608668" type="System">
+                            <param id="0" name="Layout">&quot;start&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
